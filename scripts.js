@@ -25,17 +25,21 @@ const dataTask = (text) => {
 const createElement = (e) => {
     addTask.insertAdjacentHTML('afterbegin',
         `<div class="task"   id="${e.id}" isChecked="${e.isChecked}">
-        <input id="checker" onclick="changeIsChecked(${e.id})" type="checkbox">
-        <p>${e.text}</p>
-        <div class="delete" onclick="removeTask(${e.id})"></div>
-    </div>`)
-    console.log(addTask);
-    console.log(listTasks);
+
+            <input id="checker" onclick="changeIsChecked(${e.id})" type="checkbox">
+
+            <p>${e.text}</p>
+
+            <div class="delete" onclick="removeTask(${e.id})">
+            </div>
+            
+        </div>`)
 }
 
 //Удаляет все элементы из списка хадач
 const removeAllTasks = () => {
     const tasks = document.querySelectorAll('.task')
+    
     tasks.forEach(e => e.remove())
 }
 
@@ -73,6 +77,7 @@ const changeIsChecked = (id) => {
 
 const displayTaskDone = () => {
     const tasks = document.querySelectorAll('.task')
+
     tasks.forEach(e => {
         if (e.classList.value !== 'task do') {
             e.classList.toggle('none')
