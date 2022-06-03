@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(74, 137, 255);
+    color: rgb(74, 137, 255);
+}
+
+.wrapper {
+    background-color: #fff;
+    max-width: 27em;
+    height: 400px;
+    padding: 20px;
+    border-radius: 1em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.container {
+    margin-top: 1em;
+    display: flex;
+}
+
+.container > input {
+    border-radius: 1em;
+    border: 1px solid rgb(173, 173, 173);
+    padding: .6em;
+    flex-grow: 2;
+}
+
+.add {
+    flex-grow: 1;
+}
+
+button {
+    padding: .6em .4em;
+    border-radius: 1em;
+    border: 1px solid rgb(74, 137, 255);
+    flex-grow: 1;
+    margin-left: .3em;
+    background-color: #fff;
+    color: rgb(74, 137, 255);;
+    font-weight:700 ;
+}
+
+.add:active {
+    background-color: rgba(74, 255, 143, 0.1);
+    border: 1px solid rgb(65, 218, 124);
+    color: rgb(57, 194, 110);
+}
+
+.todos {
+    margin-top: 1em;
+    overflow-y: auto;
+    height: 100%;
+
+}
+
+
+
+
+.task {
+    display: flex;
+    padding: 0.5em;
+    margin: .5em;
+    position: relative;
+    align-items: center;
+}
+
+.task p {
+    margin-left: 0.5em;
+    flex-grow: 2;
+}
+
+#checker {
+    margin-top: 0.15em;
+}
+
+
+
+
+
+
+.menu {
+    padding-top: 1em;
+}
+
+.remove_task:active {
+    background-color: rgba(244, 247, 92, 0.1);
+    border: 1px solid rgb(203, 218, 65);
+    color: rgb(161, 173, 45);
+}
+
+.remove_all:active {
+    background-color: rgba(255, 170, 170, 0.1);
+    border: 1px solid rgb(218, 65, 65);
+    color: rgb(218, 65, 65);
+}
+
+
+.active {
+    background-color: rgb(53, 165, 230);
+}
+
+/* button.delete {
+    height: 1.2em;
+    width: 1.2em;
+    flex-grow: 0;
+    padding: initial;
+} */
+
+.delete {
+    position: relative;
+    background-color: rgb(74, 137, 255);
+    width: 1.7em;
+    height: 1.7em;
+    border-radius: 1em;
+}
+
+.delete::after {
+    content: "+";
+    color: white;
+    position: absolute;
+    bottom: .01em;
+    left: .26em;
+    transform: rotate(45deg);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.delete:active {
+    background-color: rgba(74, 137, 255, .7);
+}
+
+
+.do {
+    background-color: antiquewhite;
+}
+
+.none {
+    display: none;
+}
