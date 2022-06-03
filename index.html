@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <h1>App ToDo</h1>
-            <div class="container">
-                <input id="add-new" type="text" name="task" placeholder="Задача" onfocus="this.value=''" >
-                <button  class="add">Add</button>
-                <button class="remove_all" onclick="removeAllTasks()">Remove All</button>
-            </div>
-            <div class="todos">
-            </div>
-            <div class="menu">
-                <button class="done" onclick="displayTaskDone()">Done</button>
-            </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>App ToDo</h1>
+        <div class="container">
+            <input id="add-new" type="text" name="task" placeholder="Задача" onfocus="this.value=''">
+            <button class="add">Add</button>
+            <button class="remove_all" onclick="removeAllTasks()">Remove All</button>
         </div>
-        <script src="./scripts.js"></script>
-    </body>
+        <div class="todos">
+        </div>
+        <div class="menu">
+            <button class="done" onclick="displayTaskDone()">Done</button>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+
 </html>
-
-
-
