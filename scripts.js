@@ -24,14 +24,13 @@ const dataTask = (text) => {
 // Шаблон HTML
 const createElement = (e) => {
     addTask.insertAdjacentHTML('afterbegin',
-        `<div class="task"   id="${e.id}" isChecked="${e.isChecked}">
+        `<div class="task" id="${e.id}" isChecked="${e.isChecked}">
 
             <input id="checker" onclick="changeIsChecked(${e.id})" type="checkbox">
 
             <p>${e.text}</p>
 
-            <div class="delete" onclick="removeTask(${e.id})">
-            </div>
+            <div class="delete" onclick="removeTask(${e.id})"></div>
             
         </div>`)
 }
@@ -39,7 +38,7 @@ const createElement = (e) => {
 //Удаляет все элементы из списка хадач
 const removeAllTasks = () => {
     const tasks = document.querySelectorAll('.task')
-    
+
     tasks.forEach(e => e.remove())
 }
 
@@ -80,7 +79,31 @@ const displayTaskDone = () => {
 
     tasks.forEach(e => {
         if (e.classList.value !== 'task do') {
-            e.classList.toggle('none')
+            e.classList.add('none')
+        }
+    })
+}
+
+const displayTaskInProgress = () => {
+    const inProgress = document.querySelectorAll('.task')
+
+    inProgress.forEach(e => {
+        if (e.classList.value != 'task do') {
+            e.classList.remove('none')
+        }
+        if (e.classList.value == 'task do') {
+            e.classList.add('none')
+        }
+    })
+
+}
+
+const displayTaskAll = () => {
+    const all = document.querySelectorAll('.task')
+
+    all.forEach(e => {
+        if (e.classList.value == 'task none' || e.classList.value == 'task do none') {
+            e.classList.remove('none')
         }
     })
 }

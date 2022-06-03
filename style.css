@@ -125,6 +125,17 @@ button {
     background-color: rgba(74, 137, 255, .7);
 }
 
+.all {
+    width: 50px;
+}
+
+.done:active,
+.in-progress:active,
+.all:active {
+    background: rgba(74, 137, 255, .1);
+    ;
+}
+
 .do {
     background-color: antiquewhite;
 }
